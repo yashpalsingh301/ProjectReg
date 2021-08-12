@@ -1,0 +1,10 @@
+<div>
+    <h2>Forgot Password?</h2>
+
+    <form #passforForm="ngForm" (ngSubmit)="otpEmail(email)"></form>
+
+    <label for="email">Enter email Id</label><br>
+    <input type="text" id="email" [(ngModel)]="email" name="email"><br><br>
+
+    <button type="submit">Submit</button>
+</div>

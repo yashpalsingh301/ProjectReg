@@ -1,0 +1,30 @@
+#Id1{
+    width: 30%;
+    margin: auto;
+    
+    padding: 13px;
+}
+
+input{
+    width: 100%;
+}
+
+input.ng-invalid.ng-touched{
+    border:1px red solid;
+    
+}
+#main{
+    background-color: rgb(162, 247, 162);
+
+}
+
+#Id2{
+    text-align: center;
+    color: rgb(120, 76, 161);
+}
+button{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 150px;
+}

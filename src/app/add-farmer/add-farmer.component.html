@@ -1,0 +1,131 @@
+<div id="main">
+    <div id="Id1">
+
+        <h2 id="Id2">Register</h2>
+
+        <form #regForm="ngForm" (ngSubmit)="saveData()">
+
+            <!-- <label for="fid">Farmer Id</label>:<br>
+            <input type="text" id="fid" [(ngModel)]="farmer.farmerId" name="farmerId" #fid="ngModel" required
+                pattern={{adhrPattCheck}} /><br><br>
+            <div *ngIf="fid.invalid && (fid.dirty||fid.touched)">
+                <div *ngIf="fid.errors?.required" style="color: red;">Farmer id is required</div>
+                <div *ngIf="fid.errors?.pattern" style="color: red;">Enter correct farmer id</div> <br>
+            </div> -->
+
+            <label for="name">Name</label>:<br>
+            <input type="text" id="name" [(ngModel)]="farmer.farmerName" name="farmerName" #name="ngModel"
+                required /><br><br>
+            <div *ngIf="name.invalid && (name.dirty||name.touched)">
+                <div *ngIf="name.errors?.required" style="color: red;">Name is required</div><br>
+            </div>
+
+            <label for="email">Email</label>:<br>
+            <input type="text" id="email" [(ngModel)]="farmer.email" name="email" #email="ngModel" required minlengt="8"
+                pattern={{patternCheck}} /><br><br>
+            <div *ngIf="email.invalid && (email.dirty||email.touched)">
+                <div *ngIf="email.errors?.required" style="color: red;">email is required</div>
+                <div *ngIf="email.errors?.pattern" style="color: red;">Enter correct email</div>
+                <div *ngIf="email.errors?.minlength" style="color: red;">must contain 8 digit</div><br>
+            </div>
+
+            <label for="pass">Password</label>:<br>
+            <input type="text" id="pass" [(ngModel)]="farmer.password" name="password" #pass="ngModel" required
+                minlength="" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" /><br><br>
+            <div *ngIf="pass.invalid && (pass.dirty||pass.touched)">
+                <div *ngIf="pass.errors?.required" style="color: red;">Password is required</div>
+                <div *ngIf="pass.errors?.pattern" style="color: red;">Enter strong password</div>
+                <div *ngIf="pass.errors?.minlength" style="color: red;">must contain 8 digit</div><br><br>
+            </div>
+
+            <label for="mob">Mobile Number</label>:<br>
+            <input type="text" id="mob" [(ngModel)]="farmer.mobNumber" name="mobNumber" #mob="ngModel" required
+                pattern={{mobPattCheck}} /><br><br>
+            <div *ngIf="mob.invalid && (mob.dirty||mob.touched)">
+                <div *ngIf="mob.errors?.required" style="color: red;">Mobile number is required</div>
+                <div *ngIf="mob.errors?.pattern" style="color: red;">Enter correct mobile number</div> <br>
+            </div>
+
+            <label for="acc">Account Number</label>:<br>
+            <input type="text" id="acc" [(ngModel)]="farmer.accountNo" name="accountNo" #account="ngModel" required
+                pattern={{adhrPattCheck}} /><br><br>
+            <div *ngIf="account.invalid && (account.dirty||account.touched)">
+                <div *ngIf="account.errors?.required" style="color: red;">Account number is required</div>
+                <div *ngIf="account.errors?.pattern" style="color: red;">Enter correct account number</div> <br>
+            </div>
+
+            <label for="ifsc">IFSC Code</label>:<br>
+            <input type="text" id="ifsc" [(ngModel)]="farmer.ifscCode" name="ifscCode" #ifsc="ngModel"
+                required /><br><br>
+            <div *ngIf="ifsc.invalid && (ifsc.dirty||ifsc.touched)">
+                <div *ngIf="ifsc.errors?.required" style="color: red;">IFSC Code is required</div> <br>
+            </div>
+
+            <label for="adhaar"> Adhaar Number</label>:<br>
+            <input type="text" id="adhaar" [(ngModel)]="farmer.adhaarNo" name="adhaarNo" #adhaar="ngModel" required
+                minlength="12" pattern={{adhrPattCheck}} /><br><br>
+            <div *ngIf="adhaar.invalid && (adhaar.dirty||adhaar.touched)">
+                <div *ngIf="adhaar.errors?.required" style="color: red;">Adhaar number is required</div>
+                <div *ngIf="adhaar.errors?.pattern" style="color: red;">Enter correct adhaar number</div>
+                <div *ngIf="adhaar.errors?.minlength" style="color: red;">must contain 12 digit</div><br>
+            </div>
+
+            <label for="pan"> Pan Number</label>:<br>
+            <input type="text" id="pan" [(ngModel)]="farmer.panNo" name="panNo" #pan="ngModel" required
+                minlength="10" /><br><br>
+            <div *ngIf="pan.invalid && (pan.dirty||pan.touched)">
+                <div *ngIf="pan.errors?.required" style="color: red;">Pan number is required</div>
+                <!-- <div *ngIf="pan.errors?.pattern" style="color: red;">Enter correct Pan number</div> -->
+                <div *ngIf="pan.errors?.minlength" style="color: red;">must contain 10 digit</div><br>
+            </div>
+
+            <label for="cer"> Certificate Number</label>:<br>
+            <input type="text" id="cer" [(ngModel)]="farmer.certificateNo" name="certificateNo" #certificate="ngModel"
+                required pattern={{adhrPattCheck}} /><br><br>
+            <div *ngIf="certificate.invalid && (certificate.dirty||certificate.touched)">
+                <div *ngIf="certificate.errors?.required" style="color: red;">Certificate number is required</div>
+                <div *ngIf="certificate.errors?.pattern" style="color: red;">Enter correct Certificate number</div>
+                <br>
+            </div>
+
+             <label for="landid">Land Id</label>:<br>
+            <input type="text" id="landid" [(ngModel)]="land.landId" name="landId" #landid="ngModel" required
+                pattern={{adhrPattCheck}} /><br><br>
+            <div *ngIf="landid.invalid && (landid.dirty||landid.touched)">
+                <div *ngIf="landid.errors?.required" style="color: red;">land id is required</div>
+                <div *ngIf="landid.errors?.pattern" style="color: red;">Enter correct Land id</div> <br>
+            </div> 
+
+            <label for="locid">Location Id</label>:<br>
+            <input type="text" id="locid" [(ngModel)]="farmer.locationId" name="locationId" #locid="ngModel" required
+                pattern={{adhrPattCheck}} /><br><br>
+            <div *ngIf="locid.invalid && (locid.dirty||locid.touched)">
+                <div *ngIf="locid.errors?.required" style="color: red;">location id is required</div>
+                <div *ngIf="locid.errors?.pattern" style="color: red;">Enter correct location id</div> <br>
+            </div>
+
+
+            <label for="area">Area</label>:<br>
+            <input type="text" id="area" [(ngModel)]="land.area" name="area" #area="ngModel" required
+                pattern={{adhrPattCheck}} /><br><br>
+            <div *ngIf="area.invalid && (area.dirty||area.touched)">
+                <div *ngIf="area.errors?.required" style="color: red;">Area is required</div>
+                <div *ngIf="area.errors?.pattern" style="color: red;">Enter correct Area</div> <br>
+            </div>
+
+            <label for="locat">Location ID of area</label>:<br>
+            <input type="text" id="locat" [(ngModel)]="land.locationId" name="locationId" #lid="ngModel" required
+                pattern={{adhrPattCheck}} /><br><br>
+            <div *ngIf="lid.invalid && (lid.dirty||lid.touched)">
+                <div *ngIf="lid.errors?.required" style="color: red;">Farmer id is required</div>
+                <div *ngIf="lid.errors?.pattern" style="color: red;">Enter correct farmer id</div> <br>
+            </div>
+
+            <button type="submit" [disabled]="regForm.invalid"
+                style="color: blue; background-color: aqua;">Submit</button>
+
+
+        </form>
+
+    </div>
+</div>

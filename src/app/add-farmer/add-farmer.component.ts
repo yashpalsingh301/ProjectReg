@@ -32,9 +32,7 @@ export class AddFarmerComponent implements OnInit {
       console.log(data);
     })
 
-    this.farmerService.addLand(this.land).subscribe((data)=>{
-      console.log(data);
-    })
+    
 
   }
 

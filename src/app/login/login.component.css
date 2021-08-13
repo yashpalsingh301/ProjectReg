@@ -1,0 +1,41 @@
+
+#main{
+    background-image: url(); ;
+}
+
+#id1{
+    width: 25%;
+    margin: auto;
+    margin-top: 120px;
+    
+}
+
+input{
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+}
+
+#but{
+   
+    margin-top: 15px;
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    
+}
+
+#new{
+    margin-left: 250px;
+}
+
+#reg{
+    margin-left: 10px;
+    width: 82px;
+    cursor: pointer;
+    border-radius: 5px;
+}

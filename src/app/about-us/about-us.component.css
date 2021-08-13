@@ -1,0 +1,27 @@
+
+.About{
+    width: 45%;
+    margin: auto;
+    border: 2px black dotted;
+    height: 90vh;
+    padding: 10px;
+    background-color: rgb(150, 245, 150);
+}
+
+
+#image{
+    float: left;
+    margin: 10px 10px 10px 20px;
+    border: 2px black solid;
+    border-radius: 3px;
+    
+}
+
+h2{
+    width: 30%;
+    margin: 40px auto;
+}
+
+#statement1{
+    margin-top: 45px;
+}

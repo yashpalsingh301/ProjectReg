@@ -1,0 +1,33 @@
+
+#Contact{width: 60%;
+    height: 80vh;
+background-color: rgb(162, 247, 162);
+margin: auto;
+padding: 15px;
+
+}
+
+form{
+    width: 30%;
+    margin: auto;
+    
+    /* background-color: white; */
+}
+
+#Id1{
+    text-align: center;
+    
+}
+
+input{
+    width: 100%;
+}
+
+button{
+    margin-top: 20px;
+    background-color: rgb(145, 145, 219);
+}
+
+input.ng-invalid.ng-touched{
+    border:1px red solid;
+}

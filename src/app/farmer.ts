@@ -2,38 +2,50 @@ import { Land } from "./land";
 
 
 export class Farmer {
-    farmerId:number;
-    farmerName:String;
-    email:String;
-    mobNumber:String;
-    accountNo:String;
-    ifscCode:String;
-    adhaarNo:String;
-    panNo:String;
-    certificateNo:string;
-    password:String;
-    landId:number;;
-    locationId:number;
-    
-    
+    farmerId: number;
+    farmerName: String;
+    email: String;
+    mobNumber: String;
+    accountNo: String;
+    ifscCode: String;
+    adhaarNo: String;
+    panNo: String;
+    certificateNo: string;
+    password: String;
+    landId: number;
+    area: number;
+    address: string;
+    city: string;
+    state: string;
+    pinCode: string;
 
-     
+    constructor(){}
 
-    // constructor(farmerName:String,emailId:String,mobNo:String, accountNo:String,ifscCode:String,adhaarNo:String, panNo:String,
-    //     certificateNo:string,password:String, landId:number,locationId:number,farmerId:number)
-    //     {
-    //         this.farmerId=farmerId;
-    //         this.farmerName=farmerName;
-    //         this.certificateNo=certificateNo;
-    //         this.accountNo=accountNo;
-    //         this.adhaarNo=adhaarNo;
-    //         this.emailId=emailId;
-    //         this.mobNo=mobNo;
-    //         this.locationId=locationId;
-    //         this.password=password;
-    //         this.panNo=panNo;
-    //         this.landId=landId;
-    //         this.ifscCode=ifscCode;
-    //     }
+    // constructor(farmerId: number, farmerName: String, email: String,
+    //      mobNumber: String, accountNo: String, ifscCode: String, adhaarNo: String,
+    //       panNo: String, certificateNo: string, password: String, landId: number, area: number, address: string,
+    //        city: string, state: string, pinCode: string){
+
+    //            this.farmerId=farmerId;
+    //            this.farmerName=farmerName;
+    //            this.email=email;
+    //            this.mobNumber=mobNumber;
+    //            this.accountNo=accountNo;
+    //            this.ifscCode=ifscCode;
+    //            this.adhaarNo=adhaarNo;
+    //            this.panNo=panNo;
+    //            this.certificateNo=certificateNo;
+    //            this.password=password;
+    //            this.landId=landId;
+    //            this.area=area;
+    //            this.address=address;
+    //            this.city=city;
+    //            this.state=state;
+    //            this.pinCode=pinCode;
+    //        }
+
+
+
+
 
 }

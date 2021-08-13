@@ -96,15 +96,7 @@
                 <div *ngIf="landid.errors?.pattern" style="color: red;">Enter correct Land id</div> <br>
             </div> 
 
-            <label for="locid">Location Id</label>:<br>
-            <input type="text" id="locid" [(ngModel)]="farmer.locationId" name="locationId" #locid="ngModel" required
-                pattern={{adhrPattCheck}} /><br><br>
-            <div *ngIf="locid.invalid && (locid.dirty||locid.touched)">
-                <div *ngIf="locid.errors?.required" style="color: red;">location id is required</div>
-                <div *ngIf="locid.errors?.pattern" style="color: red;">Enter correct location id</div> <br>
-            </div>
-
-
+            
             <label for="area">Area</label>:<br>
             <input type="text" id="area" [(ngModel)]="land.area" name="area" #area="ngModel" required
                 pattern={{adhrPattCheck}} /><br><br>
@@ -113,12 +105,33 @@
                 <div *ngIf="area.errors?.pattern" style="color: red;">Enter correct Area</div> <br>
             </div>
 
-            <label for="locat">Location ID of area</label>:<br>
-            <input type="text" id="locat" [(ngModel)]="land.locationId" name="locationId" #lid="ngModel" required
-                pattern={{adhrPattCheck}} /><br><br>
-            <div *ngIf="lid.invalid && (lid.dirty||lid.touched)">
-                <div *ngIf="lid.errors?.required" style="color: red;">Farmer id is required</div>
-                <div *ngIf="lid.errors?.pattern" style="color: red;">Enter correct farmer id</div> <br>
+            <label for="Add">Address</label>:<br>
+            <input type="text" id="Add" [(ngModel)]="farmer.address" name="address" #add="ngModel"
+                required /><br><br>
+            <div *ngIf="add.invalid && (add.dirty||add.touched)">
+                <div *ngIf="add.errors?.required" style="color: red;">Name is required</div><br>
+            </div>
+
+
+            <label for="city">City</label>:<br>
+            <input type="text" id="city" [(ngModel)]="farmer.city" name="city" #city="ngModel"
+                required /><br><br>
+            <div *ngIf="city.invalid && (city.dirty||city.touched)">
+                <div *ngIf="city.errors?.required" style="color: red;">Name is required</div><br>
+            </div>
+
+            <label for="state">State</label>:<br>
+            <input type="text" id="state" [(ngModel)]="farmer.state" name="state" #state="ngModel"
+                required /><br><br>
+            <div *ngIf="state.invalid && (state.dirty||state.touched)">
+                <div *ngIf="state.errors?.required" style="color: red;">Name is required</div><br>
+            </div>
+
+            <label for="pin">Pin Code</label>:<br>
+            <input type="text" id="pin" [(ngModel)]="farmer.pinCode" name="pinCode" #pin="ngModel"
+                required /><br><br>
+            <div *ngIf="pin.invalid && (pin.dirty||pin.touched)">
+                <div *ngIf="pin.errors?.required" style="color: red;">Name is required</div><br>
             </div>
 
             <button type="submit" [disabled]="regForm.invalid"

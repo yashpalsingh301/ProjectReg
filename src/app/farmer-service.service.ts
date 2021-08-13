@@ -12,17 +12,22 @@ export class FarmerServiceService {
   
 
   constructor(private httpClient:HttpClient) {}
-   private baseUrl="http://localhost:9697/farmer/api/getfarmers";
-   private baseUrl1="http://localhost:9697/farmer/api/getlands";
+   private baseUrl1="http://localhost:9697/farmer/api/getfarmers";
+   private baseUrl2="http://localhost:9697/farmer/api/login";
+   
   
   addFarmer(farmer:Farmer):Observable<object>
   {
-    return this.httpClient.post(`${this.baseUrl}`,farmer);
+    return this.httpClient.post(`${this.baseUrl1}`,farmer);
   }
 
-  addLand(land:Land):Observable<object>
+  public loginFarmer(farmer:Farmer):Observable<any>
   {
-    return this.httpClient.post(`${this.baseUrl1}`,land);
+     return this.httpClient.post<any>(`${this.baseUrl2}`,farmer);
   }
+
+
+
+  
 
 }

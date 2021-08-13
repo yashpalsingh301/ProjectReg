@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Farmer } from '../farmer';
 import { ForgotService } from '../forgot.service';
 
 @Component({
@@ -8,19 +9,20 @@ import { ForgotService } from '../forgot.service';
   styleUrls: ['./forgot.component.css']
 })
 export class ForgotComponent implements OnInit {
-  email:String;
+  farmer:Farmer=new Farmer();
 
   constructor(private _authService:ForgotService) { }
 
   ngOnInit(): void {
   }
 
-  otpEmail(email:String){
-    this._authService.forgetPassword(this.email).subscribe((data)=>{
+  otpEmail(){
+    this._authService.forgotPassword(this.farmer).subscribe((data)=>{
       console.log(data);
+      console.log("chutiya");
     },
     (err)=>{
-      console.log(err);
+      console.log("erroe hai");
     })
   }
 

@@ -1,0 +1,42 @@
+<div id="Contact">
+    <h2 id="Id1">Contact Us</h2>
+
+    <form #contactForm="ngForm" (submit)="add(contactForm)">
+
+        <label for="name" >Name</label>:<br>
+        <input type="text"  id="name" [(ngModel)]="Name"  name="Name" #name="ngModel"   required/><br><br>
+        <div *ngIf="name.invalid && (name.dirty||name.touched)"> 
+            <div *ngIf="name.errors?.required" style="color: red;">Name is required</div><br>
+        </div>
+
+
+        <label for="email">Email</label>:<br>
+        <input type="text" id="email" [(ngModel)]="Email" name="Email" #email="ngModel" required minlengt="8" 
+         pattern={{patternCheck}}/><br><br>
+        <div *ngIf="email.invalid && (email.dirty||email.touched)"> 
+            <div *ngIf="email.errors?.required" style="color: red;">email is required</div>
+            <div *ngIf="email.errors?.pattern" style="color: red;">Enter correct email</div>
+            <div *ngIf="email.errors?.minlength" style="color: red;">must contain 8 digit</div><br>
+        </div>
+
+        <label for="mob">Mobile Number</label>:<br>
+        <input type="text" id="mob" [(ngModel)]="Mobile" name="Mobile" #mob="ngModel" required  
+         pattern={{mobPattCheck}}/><br><br>
+        <div *ngIf="mob.invalid && (mob.dirty||mob.touched)"> 
+            <div *ngIf="mob.errors?.required" style="color: red;">Mobile number is required</div>
+            <div *ngIf="mob.errors?.pattern" style="color: red;">Enter correct mobile number</div> <br>
+        </div>
+
+        <label for="reason">Please share your concern</label>:<br>
+        <textarea type="text" id="reason" rows="5" cols="60"></textarea>
+
+
+        <button type="submit" >Submit</button>
+
+
+
+    </form>
+
+
+
+</div>

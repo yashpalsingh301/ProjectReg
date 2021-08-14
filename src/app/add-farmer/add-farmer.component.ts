@@ -20,7 +20,7 @@ export class AddFarmerComponent implements OnInit {
   
 
   constructor(private farmerService:FarmerServiceService) { 
-    this.farmer.landId=this.land.landId;
+    
   }
 
   ngOnInit(): void {

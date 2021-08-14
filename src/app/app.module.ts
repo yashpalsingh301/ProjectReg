@@ -14,6 +14,11 @@ import { AfterregComponent } from './afterreg/afterreg.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { LoginbidderComponent } from './loginbidder/loginbidder.component';
+import { BidderregComponent } from './bidderreg/bidderreg.component';
+import { ProductComponent } from './product/product.component';
+
 
 
 @NgModule({
@@ -27,7 +32,12 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     AfterregComponent,
     NavbarComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    AdminLoginComponent,
+    LoginbidderComponent,
+    BidderregComponent,
+    ProductComponent
+  
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,8 @@ input.ng-invalid.ng-touched{
     
 }
 #main{
-    background-color: rgb(162, 247, 162);
+    /* background-color: rgb(162, 247, 162); */
+    background-image: url("https://images.unsplash.com/photo-1529159942819-334f07de4fe5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80");
 
 }
 

@@ -31,7 +31,7 @@
 
             <label for="pass">Password</label>:<br>
             <input type="text" id="pass" [(ngModel)]="farmer.password" name="password" #pass="ngModel" required
-                minlength="" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" /><br><br>
+                minlength="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!#%*?&]{8,18}$" /><br><br>
             <div *ngIf="pass.invalid && (pass.dirty||pass.touched)">
                 <div *ngIf="pass.errors?.required" style="color: red;">Password is required</div>
                 <div *ngIf="pass.errors?.pattern" style="color: red;">Enter strong password</div>

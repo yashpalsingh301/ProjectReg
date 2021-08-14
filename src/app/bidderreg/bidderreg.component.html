@@ -1,0 +1,57 @@
+<div class="container">
+    <form #myForm="ngForm" (ngSubmit)="saveData()">
+
+        <table >
+                <tr>
+                    <td><label for="bidder_id">bidder_id</label> </td>   
+                    <td><input  type="number" name="bidder_id" [(ngModel)]="bidder.bidder_id" required></td>       
+                </tr>
+                <tr>
+                    <td><label for="bidder_name">bidder_name</label> </td>   
+                    <td><input  type="text" name="bidder_name" [(ngModel)]="bidder.bidder_name" required></td>       
+                </tr>
+                <tr>
+                    <td><label for="email_id">email_id</label> </td>   
+                    <td><input  type="text" name="email_id" [(ngModel)]="bidder.email" required></td>       
+                </tr>
+                <tr>
+                    <td><label for="mobile_no">mobile_no</label> </td>   
+                    <td><input  type="text" name="mobile_no" [(ngModel)]="bidder.mobile_no" required></td>       
+                </tr>
+                <tr>
+                    <td><label for="account_no">account_no</label> </td>   
+                    <td><input  type="text" name="account_no" [(ngModel)]="bidder.account_no" required></td>       
+                </tr>
+                <tr>
+                    <td><label for="ifsc_code">IFSC_code</label> </td>   
+                    <td><input  type="text" name="ifsc_code" [(ngModel)]="bidder.ifsc_code" required></td>       
+                </tr>
+                <tr>
+                    <td><label for="aadhar_no">Aadhar_no</label> </td>   
+                    <td><input  type="text" name="aadhar_no" [(ngModel)]="bidder.aadhar_no" required></td>       
+                </tr>
+                <tr>
+                    <td><label for="pan_no">pan_no</label> </td>   
+                    <td><input  type="text" name="pan_no" [(ngModel)]="bidder.pan_no" required></td>       
+                </tr>
+                <tr>
+                    <td><label for="license_no">license_no</label> </td>   
+                    <td><input  type="text" name="license_no" [(ngModel)]="bidder.license_no" required></td>       
+                </tr>
+                <tr>
+                    <td><label for="password">password</label> </td>   
+                    <td><input  type="text" name="password" [(ngModel)]="bidder.password" required></td>       
+                </tr>
+                <tr>
+                    <td><label for="location_id">Location_id</label> </td>   
+                    <td><input  type="text" name="location_id" [(ngModel)]="bidder.location_id" required></td>       
+                </tr>
+                <tr>
+                    <td></td>   
+                    <td><input type="submit" value="Save Product" [disabled]="!myForm.valid"></td>       
+                </tr>
+        </table>
+
+    </form>
+
+</div>

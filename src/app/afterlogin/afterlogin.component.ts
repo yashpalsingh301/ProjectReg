@@ -14,7 +14,7 @@ export class AfterloginComponent implements OnInit {
   }
 
 
-  onClickFarmer(){
+  onClick(){
     this.router.navigate(['/farmerLogin']);
   }
 }

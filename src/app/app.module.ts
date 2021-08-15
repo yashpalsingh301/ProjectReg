@@ -18,6 +18,11 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { LoginbidderComponent } from './loginbidder/loginbidder.component';
 import { BidderregComponent } from './bidderreg/bidderreg.component';
 import { ProductComponent } from './product/product.component';
+import { AdminClaimComponent } from './admin-claim/admin-claim.component';
+import {InsurancePolicyComponent} from './insurance-policy/insurance-policy.component';
+import {FarmerClaimComponent} from './farmer-claim/farmer-claim.component';
+import { AfterAdminLoginComponent } from './after-admin-login/after-admin-login.component';
+import { InsuranceCreationComponent } from './insurance-creation/insurance-creation.component';
 
 
 
@@ -36,7 +41,12 @@ import { ProductComponent } from './product/product.component';
     AdminLoginComponent,
     LoginbidderComponent,
     BidderregComponent,
-    ProductComponent
+    ProductComponent,
+    AdminClaimComponent,
+    InsurancePolicyComponent,
+    FarmerClaimComponent,
+    AfterAdminLoginComponent,
+    InsuranceCreationComponent
   
   ],
   imports: [

@@ -10,6 +10,12 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { LoginbidderComponent } from './loginbidder/loginbidder.component';
 import { BidderregComponent } from './bidderreg/bidderreg.component';
+import { ProductComponent } from './product/product.component';
+import { InsurancePolicyComponent } from './insurance-policy/insurance-policy.component';
+import { FarmerClaimComponent } from './farmer-claim/farmer-claim.component';
+import { AdminClaimComponent } from './admin-claim/admin-claim.component';
+import { AfterAdminLoginComponent } from './after-admin-login/after-admin-login.component';
+import { InsuranceCreationComponent } from './insurance-creation/insurance-creation.component';
 
 
 const routes: Routes = [
@@ -23,7 +29,15 @@ const routes: Routes = [
   {path:'contactUs',component:ContactUsComponent},
   {path:'adminlogin',component:AdminLoginComponent},
   {path:'bidderlogin',component:LoginbidderComponent},
-  {path:'bidderReg',component:BidderregComponent}
+  {path:'bidderReg',component:BidderregComponent},
+  {path:'addProduct',component:ProductComponent},
+  {path:'policy',component:InsurancePolicyComponent},
+  {path:'claim',component:FarmerClaimComponent},
+  {path:'adminClaim',component:AdminClaimComponent},
+  {path:'afterAdminLogin',component:AfterAdminLoginComponent},
+  {path:'InsuranceCreation',component:InsuranceCreationComponent}
+
+
 ];
 
 @NgModule({

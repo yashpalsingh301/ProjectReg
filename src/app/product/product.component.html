@@ -1,1 +1,43 @@
-<p>product works!</p>
+<h1>Farmer Product Table</h1>
+<form #myForm="ngForm" (ngSubmit)="saveData()">
+
+    <table >
+            <!-- <tr>
+                <td><label for="product_id">Product_id</label> </td>   
+                <td><input  type="number" name="product_id" [(ngModel)]="addproduct.product_id" required></td>       
+            </tr> -->
+            <tr>
+                <td><label for="farmer_id">Farmer Id</label> </td>   
+                <td><input  type="number" name="farmer_id" [(ngModel)]="addproduct.farmer_id" required></td>       
+            </tr>
+            <tr>
+                <td><label for="product_name">Crop Name</label> </td>   
+                <td><input  type="text" name="crop_name" [(ngModel)]="addproduct.crop_name" required></td>       
+            </tr>
+             <tr>
+                <td><label for="product_type">Crop Type</label> </td>   
+                <td><input  type="text" name="crop_type" [(ngModel)]="addproduct.crop_type" required></td>       
+            </tr>
+             <tr>
+                <td><label for="quantity">Quantity</label> </td>   
+                <td><input  type="number" name="quantity" [(ngModel)]="addproduct.quantity" required></td>       
+            </tr>
+             <tr>
+                <td><label for="quantity">Base price</label> </td>   
+                <td><input  type="number" name="quantity" [(ngModel)]="addproduct.base_price" required></td>       
+            </tr>
+             <!-- <tr>
+                <td><label for="quantity">bidder_amount</label> </td>   
+                <td><input  type="number" name="quantity" [(ngModel)]="addproduct.bidder_amount" required></td>       
+            </tr>
+             <tr>
+                <td><label for="quantity">bidder_id</label> </td>   
+                <td><input  type="number" name="quantity" [(ngModel)]="addproduct.bidder_id" required></td>       
+            </tr> -->
+            <tr>
+                <td></td>   
+                <td><input type="submit" value="Save Product" [disabled]="!myForm.valid"></td>       
+            </tr>
+    </table>
+
+</form>

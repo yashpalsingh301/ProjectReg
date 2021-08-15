@@ -6,17 +6,33 @@
                     <td><label for="bidder_id">bidder_id</label> </td>   
                     <td><input  type="number" name="bidder_id" [(ngModel)]="bidder.bidder_id" required></td>       
                 </tr>
+
                 <tr>
                     <td><label for="bidder_name">bidder_name</label> </td>   
-                    <td><input  type="text" name="bidder_name" [(ngModel)]="bidder.bidder_name" required></td>       
+                    <td><input  type="text" name="bidder_name" [(ngModel)]="bidder.bidder_name"  #name="ngModel" required></td>     
+                    <div *ngIf="name.invalid && (name.dirty||name.touched)">
+                        <br>
+                        <div *ngIf="name.errors?.required" style="color: red;">Name is required</div>
+                    </div>  
                 </tr>
+
                 <tr>
                     <td><label for="email_id">email_id</label> </td>   
-                    <td><input  type="text" name="email_id" [(ngModel)]="bidder.email" required></td>       
+                    <td><input  type="text" name="email_id" [(ngModel)]="bidder.email" required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" #email="ngModel"></td>  
+                    <div *ngIf="email.invalid && (email.dirty||email.touched)">
+                        <br>
+                        <div *ngIf="email.errors?.required" style="color: red;">email is required</div>
+                        <div *ngIf="email.errors?.pattern" style="color: red;">Enter correct email</div>
+                    </div>     
                 </tr>
                 <tr>
                     <td><label for="mobile_no">mobile_no</label> </td>   
-                    <td><input  type="text" name="mobile_no" [(ngModel)]="bidder.mobile_no" required></td>       
+                    <td><input  type="text" name="mobile_no" [(ngModel)]="bidder.mobile_no" required #mob="ngModel" pattern="(0/91)?[7-9][0-9]{9}"></td>   
+                    <div *ngIf="mob.invalid && (mob.dirty||mob.touched)">
+                        <br>
+                        <div *ngIf="mob.errors?.required" style="color: red;">Mobile number is required</div>
+                        <div *ngIf="mob.errors?.pattern" style="color: red;">Enter correct mobile number</div> 
+                    </div>    
                 </tr>
                 <tr>
                     <td><label for="account_no">account_no</label> </td>   

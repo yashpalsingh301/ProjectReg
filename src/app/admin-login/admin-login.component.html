@@ -9,21 +9,13 @@
           <label for="email">Email</label><br>
           <input type="text" id="email" [(ngModel)]="admin.email" name="email" required minlength="8" #emailid="ngModel"
              pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" /><br><br>
-          <div *ngIf="emailid.invalid && (emailid.dirty||emailid.touched)">
-             <div *ngIf="emailid.errors?.required" style="color: red;">email is required</div>
-             <div *ngIf="emailid.errors?.pattern" style="color: red;">Enter correct email</div>
-             <div *ngIf="emailid.errors?.minlength" style="color: red;">must contain 8 digit</div><br>
-          </div>
+          
  
  
           <label for="pass">Password</label>:<br>
           <input type="text" id="pass" [(ngModel)]="admin.password" name="password" #pass="ngModel" required
              minlength="5" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" /><br><br>
-          <!-- <div *ngIf="pass.invalid && (pass.dirty||pass.touched)">
-             <div *ngIf="pass.errors?.required" style="color: red;">Password is required</div>
-             <div *ngIf="pass.errors?.pattern" style="color: red;">Enter strong password</div>
-             <div *ngIf="pass.errors?.minlength" style="color: red;">must contain 8 digit</div><br><br>
-          </div> -->
+          
  
          <button type="submit" id="but">Login</button>
  

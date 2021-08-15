@@ -1,0 +1,74 @@
+<div class="center">
+<h1>Apply for Insurance</h1>
+</div>
+<br>
+<div class="center">
+    <form #myForm="ngForm" (ngSubmit)="showData()">
+        <table>
+            <tr>
+                <td><label for="farmerName">Farmer Name</label> </td>   
+                <td><input #name=ngModel type="text" name="farmerName" [(ngModel)]="policy.farmerName"  required></td>       
+                <div *ngIf="(name.dirty||name.touched)" style="color: red;">
+                    <div *ngIf="name.errors?.required"><h5>*Name is required</h5></div>
+                </div>
+            </tr>
+            <tr>
+                <td><label for="emailId">Farmer Email ID</label> </td>   
+                <td><input #mail=ngModel type="email" name="emailId" [(ngModel)]="policy.emailId" required></td> 
+                <div *ngIf="(mail.dirty||mail.touched)" style="color: red;">
+                    <div *ngIf="mail.errors?.required"><h5>*Mail is required</h5></div>
+                </div>      
+            </tr>
+            <tr>
+                <td><label for="cropName">Crop Name</label> </td>   
+                <td><input  #Cname=ngModel type="text" name="cropName" [(ngModel)]="policy.cropName" required></td> 
+                <div *ngIf="(Cname.dirty||Cname.touched)" style="color: red;">
+                    <div *ngIf="Cname.errors?.required"><h5>*Crop Name is required</h5></div>
+                </div>      
+            </tr>
+            <tr>
+                <td>Crop Type </td>   
+                <td><input #ct=ngModel  type="text" name="cropType" [(ngModel)]="insurance.cropType" required></td>
+                <div *ngIf="(ct.dirty||ct.touched)" style="color: red;">
+                    <div *ngIf="ct.errors?.required"><h5>*crop Type is required</h5></div>
+                </div>
+            </tr>
+            <tr>
+                <td>Farm Area </td>   
+                <td><input #areaData=ngModel type="number" name="area" [(ngModel)]="area" required></td>
+                <div *ngIf="(areaData.dirty||areaData.touched)" style="color: red;">
+                    <div *ngIf="areaData.errors?.required"><h5>*Area is required</h5></div>
+                </div>
+            </tr>
+            <tr>
+                <td></td>   
+                <td><input type="submit" value="Search" [disabled]="!myForm.valid"></td>       
+            </tr>
+        </table>
+    </form>
+</div>   
+<br><br>
+<div class="center">
+<table class="Table">
+    <thead>
+        <th>Insurance Name</th>
+        <th>Company Name</th>
+        <th>Crop Type</th>
+        <th>Year</th>
+        <th>perimum Percentage</th>
+        <th>Sum Insured per hectare</th>
+        <th>perimum Amount</th>
+        <th>Apply</th>
+    </thead>
+    <tr *ngFor="let i of insurance">
+        <td>{{i.insuranceName}}</td>
+        <td>{{i.companyName}}</td>
+        <td>{{i.cropType}}</td>
+        <td>{{i.year}}</td>
+        <td>{{i.perimumPercentage}}</td>
+        <td>{{i.sumInsured}}</td>
+        <td>{{((i.sumInsured*i.perimumPercentage)/100)*this.area}}</td>
+        <td> <input type="submit" value="Apply" (click)="Apply(i)"></td>
+    </tr>
+</table>
+</div>

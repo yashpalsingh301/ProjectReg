@@ -1,11 +1,12 @@
-#main{
-    background-image: url(); ;
-}
+#main{width: 100hw;
+    height: 90vh;
+    background-image: url("https://images.unsplash.com/photo-1529159942819-334f07de4fe5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80");
+  }
 
 #id1{
     width: 25%;
     margin: auto;
-    margin-top: 120px;
+    margin-top: 20px;
     
 }
 

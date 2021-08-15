@@ -1,0 +1,28 @@
+
+<div class="center">
+<h1>Pending Claims</h1>
+</div><br><br>
+<div class="center">
+<table class="Table">
+    <thead>
+        <th>Claim Id</th>
+        <th>Email id</th>
+        <th>Policy Id</th>
+        <th>Cause</th>
+        <th>Date</th>
+        <th>status</th>
+        <th></th>
+        <th></th>
+    </thead>
+    <tr *ngFor="let c of claim">
+        <td>{{c.claimId}}</td>
+        <td>{{c.emailId}}</td>
+        <td>{{c.policyId}}</td>
+        <td>{{c.cause}}</td>
+        <td>{{c.date}}</td>
+        <td>{{c.status}}</td>
+        <td><button (click)="Approve(c)">Approve</button></td>
+        <td><button (click)="Reject(c)">Reject</button></td>
+    </tr>
+</table>
+</div>

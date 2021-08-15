@@ -1,0 +1,87 @@
+<div class="center">
+    <h1>Insurance Creation Form</h1>
+</div>
+<br>
+<div class="center">
+     <form #myForm="ngForm" ><!--(ngSubmit)="saveData()"> -->
+        <table cellspacing="5px" cellpadding="5%" align="center">
+            <tr>
+                <td><label for="insuranceId">Insurance Id</label> </td>   
+                <td><input  type="text" #id=ngModel name="insuranceId" [(ngModel)]="insurance.insuranceId" required></td>       
+                <div *ngIf="(id.dirty||id.touched)" style="color: red;">
+                    <div *ngIf="id.errors?.required"><h5>*Insurance Id is required</h5></div>
+                </div>
+            </tr>
+            <tr>
+                <td><label for="insuranceName">Insurance Name</label> </td>   
+                <td><input  type="text" #name=ngModel name="insuranceName" [(ngModel)]="insurance.insuranceName" required></td>       
+                <div *ngIf="(name.dirty||name.touched)" style="color: red;">
+                    <div *ngIf="name.errors?.required"><h5>*Name is required</h5></div>
+                </div>
+            </tr>
+            <tr>
+                <td><label for="companyName">Company Name</label> </td>   
+                <td><input  type="text" #Cname=ngModel name="companyName" [(ngModel)]="insurance.companyName" required></td>       
+                <div *ngIf="(Cname.dirty||Cname.touched)" style="color: red;">
+                    <div *ngIf="Cname.errors?.required"><h5>*Company Name is required</h5></div>
+                </div>
+            </tr>
+            <tr>
+                <td><label for="cropType">Crop Type</label> </td>   
+                <td><input  type="text" #ct=ngModel name="cropType" [(ngModel)]="insurance.cropType" required></td>       
+                <div *ngIf="(ct.dirty||ct.touched)" style="color: red;">
+                    <div *ngIf="ct.errors?.required"><h5>*crop Type is required</h5></div>
+                </div>
+            </tr>
+            <tr>
+                <td><label for="sumInsured">Sum Insured per Hecture</label> </td>   
+                <td><input  type="text" #si=ngModel name="sumInsured" [(ngModel)]="insurance.sumInsured" required></td>       
+                <div *ngIf="(si.dirty||si.touched)" style="color: red;">
+                    <div *ngIf="si.errors?.required"><h5>*SumInsured is required</h5></div>
+                </div>
+            </tr>
+            <tr>
+                <td><label for="year">Year</label> </td>   
+                <td><input  type="text" #year=ngModel name="year" [(ngModel)]="insurance.year" required></td>       
+                <div *ngIf="(year.dirty||year.touched)" style="color: red;">
+                    <div *ngIf="year.errors?.required"><h5>*Name is required</h5></div>
+                </div>
+            </tr>
+            <tr>
+                <td><label for="perimumPercentage">Perimum Percentage</label> </td>   
+                <td><input  type="text" #percentage=ngModel name="perimumPercentage" [(ngModel)]="insurance.perimumPercentage" required></td>       
+                <div *ngIf="(percentage.dirty||percentage.touched)" style="color: red;">
+                    <div *ngIf="percentage.errors?.required"><h5>*Percentage is required</h5></div>
+                </div>
+            </tr>
+            <tr>   
+                <td><input type="submit" value="Save Insurance" (click)="saveData()" [disabled]="!myForm.valid"></td>  
+                <td><input type="submit" value="Update Insurance" (click)="updateData()" [disabled]="!myForm.valid"></td>     
+            </tr>
+        </table>
+
+    </form>
+
+</div>
+<br>
+<div class="center"><h2>Existing Insurances </h2></div>
+ <table class="insuranceTable">
+    <thead>
+        <th>Insurance Id</th>
+        <th>Insurance Name</th>
+        <th>Company Name</th>
+        <th>Crop Type</th>
+        <th>Sum Insured per Hecture</th>
+        <th>Year</th>
+        <th>perimum Percentage</th>
+    </thead>
+    <tr *ngFor="let i of insurances">
+        <td>{{i.insuranceId}}</td>
+        <td>{{i.insuranceName}}</td>
+        <td>{{i.companyName}}</td>
+        <td>{{i.cropType}}</td>
+        <td>{{i.sumInsured}}</td>
+        <td>{{i.year}}</td>
+        <td>{{i.perimumPercentage}}</td>
+    </tr>
+</table>

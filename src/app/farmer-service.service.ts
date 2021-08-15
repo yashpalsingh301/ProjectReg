@@ -14,8 +14,8 @@ export class FarmerServiceService {
   
 
   constructor(private httpClient:HttpClient) {}
-   private baseUrl1="http://localhost:9697/farmer/api/getfarmers";
-   private baseUrl2="http://localhost:9697/farmer/api/login";
+   private baseUrl1="http://localhost:9797/farmer/api/getfarmers";
+   private baseUrl2="http://localhost:9797/farmer/api/login";
    private baseUrl3="http://localhost:9797/admin/api/loginadmin";
   
 

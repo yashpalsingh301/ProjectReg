@@ -22,7 +22,7 @@ export class AdminLoginComponent implements OnInit {
     this.service.loginAdmin(this.admin).subscribe(
       data=>{
         console.log("response recieved successfully");
-        this.msg="Successfully logged in "
+        this.route.navigate(['/afterAdminLogin'])
         // this.route.navigate(['/addFarmer']);
         
     },

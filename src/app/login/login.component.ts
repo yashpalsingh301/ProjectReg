@@ -28,9 +28,8 @@ export class LoginComponent implements OnInit {
   loginFarmers(){
     this.farmerService.loginFarmer(this.farmer).subscribe(
       data=>{
-        console.log("response recieved successfully");
-        console.log(this.farmer.farmerName);
-        this.router.navigate(['/addFarmer']);
+        console.log("fine");
+        this.router.navigate(['/afterLogin']);
         
     },
       error=>{console.log("exception occur");

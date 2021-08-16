@@ -25,4 +25,8 @@ export class AfterloginComponent implements OnInit {
   FarmerClaim(){
     this.router.navigate(['/claim'])
   }
+
+  MarketPlace(){
+    this.router.navigate(['/marketPlace'])
+  }
 }

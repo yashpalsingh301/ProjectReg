@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Farmer } from '../farmer';
 import { FarmerServiceService } from '../farmer-service.service';
 import { Land } from '../land';
@@ -19,7 +20,8 @@ export class AddFarmerComponent implements OnInit {
   adhrPattCheck:String="^[0-9]+$";
   
 
-  constructor(private farmerService:FarmerServiceService) { 
+  constructor(private farmerService:FarmerServiceService,
+    private route:Router) { 
     
   }
 
@@ -30,6 +32,8 @@ export class AddFarmerComponent implements OnInit {
     
     this.farmerService.addFarmer(this.farmer).subscribe((data)=>{
       console.log(data);
+    
+      this.route.navigate(['/farmerLogin'])
     })
 
     

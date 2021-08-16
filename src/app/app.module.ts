@@ -26,6 +26,7 @@ import { InsuranceCreationComponent } from './insurance-creation/insurance-creat
 import { BiddingTableComponent } from './bidding-table/bidding-table.component';
 import { AuctionComponent } from './auction/auction.component';
 import { ErrorComponent } from './error/error.component';
+import { MarketPlaceComponent } from './market-place/market-place.component';
 
 
 
@@ -52,7 +53,8 @@ import { ErrorComponent } from './error/error.component';
     InsuranceCreationComponent,
     BiddingTableComponent,
     AuctionComponent,
-    ErrorComponent
+    ErrorComponent,
+    MarketPlaceComponent
   
   ],
   imports: [

@@ -5,13 +5,7 @@
 
         <form #regForm="ngForm" (ngSubmit)="saveData()">
 
-            <!-- <label for="fid">Farmer Id</label>:<br>
-            <input type="text" id="fid" [(ngModel)]="farmer.farmerId" name="farmerId" #fid="ngModel" required
-                pattern={{adhrPattCheck}} /><br><br>
-            <div *ngIf="fid.invalid && (fid.dirty||fid.touched)">
-                <div *ngIf="fid.errors?.required" style="color: red;">Farmer id is required</div>
-                <div *ngIf="fid.errors?.pattern" style="color: red;">Enter correct farmer id</div> <br>
-            </div> -->
+            
 
             <label for="name">Name</label>:<br>
             <input type="text" id="name" [(ngModel)]="farmer.farmerName" name="farmerName" #name="ngModel"
@@ -30,7 +24,7 @@
             </div>
 
             <label for="pass">Password</label>:<br>
-            <input type="text" id="pass" [(ngModel)]="farmer.password" name="password" #pass="ngModel" required
+            <input type="password" id="pass" [(ngModel)]="farmer.password" name="password" #pass="ngModel" required
                 minlength="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!#%*?&]{8,18}$" /><br><br>
             <div *ngIf="pass.invalid && (pass.dirty||pass.touched)">
                 <div *ngIf="pass.errors?.required" style="color: red;">Password is required</div>
@@ -88,13 +82,7 @@
                 <br>
             </div>
 
-             <label for="landid">Land Id</label>:<br>
-            <input type="text" id="landid" [(ngModel)]="land.landId" name="landId" #landid="ngModel" required
-                pattern={{adhrPattCheck}} /><br><br>
-            <div *ngIf="landid.invalid && (landid.dirty||landid.touched)">
-                <div *ngIf="landid.errors?.required" style="color: red;">land id is required</div>
-                <div *ngIf="landid.errors?.pattern" style="color: red;">Enter correct Land id</div> <br>
-            </div> 
+            
 
             
             <label for="area">Area</label>:<br>

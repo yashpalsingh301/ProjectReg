@@ -19,6 +19,7 @@ import { InsuranceCreationComponent } from './insurance-creation/insurance-creat
 import { BiddingTableComponent } from './bidding-table/bidding-table.component';
 import { AuctionComponent } from './auction/auction.component';
 import { ErrorComponent } from './error/error.component';
+import { MarketPlaceComponent } from './market-place/market-place.component';
 
 
 const routes: Routes = [
@@ -41,6 +42,7 @@ const routes: Routes = [
   {path:'InsuranceCreation',component:InsuranceCreationComponent},
   {path:'biddingTable',component:BiddingTableComponent},
   {path:'auction',component:AuctionComponent},
+  {path:'marketPlace',component:MarketPlaceComponent},
   {path:'**',component:ErrorComponent}
 
 

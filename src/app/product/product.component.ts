@@ -22,6 +22,7 @@ export class ProductComponent implements OnInit {
     this.productservice.addNewProduct(this.addproduct).subscribe(
       (data)=>{
         console.log("Return Value from REST" + data);
+        alert("Your product has been added successfully")
       }
     )
 }

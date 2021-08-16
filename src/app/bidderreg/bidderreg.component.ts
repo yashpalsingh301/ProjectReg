@@ -31,6 +31,8 @@ export class BidderregComponent implements OnInit {
     this.bidderservice.addBidder(this.bidder).subscribe((data)=>{
       console.log(data);
     })
+
+    this.router.navigate(['/bidderlogin'])
   }
 
  

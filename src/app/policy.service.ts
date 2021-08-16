@@ -6,7 +6,7 @@ import { Policy } from './policy';
   providedIn: 'root'
 })
 export class PolicyService {
-  baseUrl:string='http://localhost:9887/policyRest/api';
+  baseUrl:string='http://localhost:9797/policyRest/api';
   constructor(private httpClient:HttpClient) { }
   getAllPolicy()
   {

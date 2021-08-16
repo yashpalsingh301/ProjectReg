@@ -7,7 +7,7 @@ import { Claim } from './claim';
 })
 export class ClaimService {
 
-  baseUrl:string='http://localhost:9887/claimRest/api';
+  baseUrl:string='http://localhost:9797/claimRest/api';
   constructor(private httpClient:HttpClient) { }
   getAllClaims()
   {

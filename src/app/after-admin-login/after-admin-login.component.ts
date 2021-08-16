@@ -21,4 +21,8 @@ adminCreation(){
   this.router.navigate(['/InsuranceCreation'])
 }
 
+auction(){
+  this.router.navigate(['/auction'])
+}
+
 }

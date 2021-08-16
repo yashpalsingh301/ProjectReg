@@ -23,6 +23,9 @@ import {InsurancePolicyComponent} from './insurance-policy/insurance-policy.comp
 import {FarmerClaimComponent} from './farmer-claim/farmer-claim.component';
 import { AfterAdminLoginComponent } from './after-admin-login/after-admin-login.component';
 import { InsuranceCreationComponent } from './insurance-creation/insurance-creation.component';
+import { BiddingTableComponent } from './bidding-table/bidding-table.component';
+import { AuctionComponent } from './auction/auction.component';
+import { ErrorComponent } from './error/error.component';
 
 
 
@@ -46,7 +49,10 @@ import { InsuranceCreationComponent } from './insurance-creation/insurance-creat
     InsurancePolicyComponent,
     FarmerClaimComponent,
     AfterAdminLoginComponent,
-    InsuranceCreationComponent
+    InsuranceCreationComponent,
+    BiddingTableComponent,
+    AuctionComponent,
+    ErrorComponent
   
   ],
   imports: [

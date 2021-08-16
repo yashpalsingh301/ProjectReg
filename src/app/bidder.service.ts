@@ -12,7 +12,7 @@ export class BidderService {
 
   constructor(private httpClient:HttpClient) { }
 
-  baseUrl:string="http://localhost:9887//productRest/api";
+  baseUrl:string="http://localhost:9797//productRest/api";
   private baseUrl1="http://localhost:9797/bidder/api/loginbidder";
   private baseurl2="http://localhost:9797/bidder/api/getbidder";
 

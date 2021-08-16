@@ -8,7 +8,7 @@ export class ProductService {
 
   constructor(private httpClient:HttpClient) { }
 
-  baseUrl:string="http://localhost:9887/productRest/api";
+  baseUrl:string="http://localhost:9797/productRest/api";
 
   addNewProduct(addproduct:Product)
   {
@@ -19,6 +19,9 @@ export class ProductService {
     return this.httpClient.get(this.baseUrl+"/products");
   }
   addBidding(addBid){
-    return this.httpClient.post(this.baseUrl+"/bidder",addBid)
+    return this.httpClient.post(this.baseUrl+"/bidding",addBid)
+  }
+  getauctiontable(){
+    return this.httpClient.get(this.baseUrl+"/bidding");
   }
 }

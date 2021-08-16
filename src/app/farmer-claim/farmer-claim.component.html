@@ -1,109 +1,109 @@
 <div class="center">
-<h1>Apply For Claim, View Policies and Claim Status</h1>
-</div>
-<br>
-<div class="center">
-    <form #myForm1="ngForm" (ngSubmit)="search()">
-        <table>
-            <tr>
-                <td><label for="emailId">Farmer Email ID</label> </td>   
-                <td><input  type="email" name="emailId" [(ngModel)]="mail" required></td>       
-            </tr>
-            <tr>
-                <td></td>   
-                <td><input type="submit" value="Search" [disabled]="!myForm1.valid"></td>       
-            </tr>
-        </table>
-
-    </form>
-
-</div>
-<div class="center">
-<br>
-<h2>Apply for Claim</h2>
-<br>
-</div>
-<div class="center">
-    <form #myForm2="ngForm" (ngSubmit)="saveData()">
-        <table>
-            <tr>
-                <td><label for="policyId">Policy No</label> </td>   
-                <td><input #id=ngModel type="text" name="policyId" [(ngModel)]="claim.policyId" required></td>  
-                <div *ngIf="(id.dirty||id.touched)" style="color: red;">
-                    <div *ngIf="id.errors?.required"><h5>*Insurance Id is required</h5></div>
-                </div>     
-            </tr>
-            <tr>
-                <td><label for="emailId">Farmer Email ID</label> </td>   
-                <td><input #email=ngModel type="email" name="emailId" [(ngModel)]="claim.emailId" required></td> 
-                <div *ngIf="(email.dirty||email.touched)" style="color: red;">
-                    <div *ngIf="email.errors?.required"><h5>*EMail is required</h5></div>
-                </div>           
-            </tr>
-            <tr>
-                <td><label for="cause">Cause of Loss</label> </td>   
-                <td><input #Ca=ngModel type="text" name="cause" [(ngModel)]="claim.cause" required></td>      
-                <div *ngIf="(Ca.dirty||Ca.touched)" style="color: red;">
-                    <div *ngIf="Ca.errors?.required"><h5>*Cause is required</h5></div>
-                </div> 
-            </tr>
-            <tr>
-                <td><label for="date">Date of Loss</label> </td>   
-                <td><input #date=ngModel type="Date" name="date" [(ngModel)]="claim.date" required></td>   
-                <div *ngIf="(date.dirty||date.touched)" style="color: red;">
-                    <div *ngIf="date.errors?.required"><h5>*Date is required</h5></div>
-                </div>     
-            </tr>
-            <tr>
-                <td></td>   
-                <td><input type="submit" value="Apply for Claim" [disabled]="!myForm2.valid"></td>       
-            </tr>
-        </table>
-
-    </form>
-</div>
-<br>
-<div class="center">
-<h2>Your Policies</h2>
-</div><br>
-<div class="center">
-<table class="Table">
-    <thead>
-        <th>Policy Id</th>
-        <th>Farmer Name</th>
-        <th>Crop Name</th>
-        <th>Crop Type</th>
-        <th>PerimumAmount Paid</th>
-        <th>Policy Ammount</th>
-    </thead>
-    <tr *ngFor="let p of policy">
-        <td>{{p.policyId}}</td>
-        <td>{{p.farmerName}}</td>
-        <td>{{p.cropName}}</td>
-        <td>{{p.cropType}}</td>
-        <td>{{p.perimumAmount}}</td>
-        <td>{{p.sumInsured}}</td>
-    </tr>
-</table>
-</div><br>
-<div class="center">
-<h2>Your Claims</h2>
-</div>
-<div class="center">
-<table class="Table">
-    <thead>
-        <th>Claim Id</th>
-        <th>Policy Id</th>
-        <th>Cause</th>
-        <th>Date</th>
-        <th>status</th>
-    </thead>
-    <tr *ngFor="let c of claimFetch">
-        <td>{{c.claimId}}</td>
-        <td>{{c.policyId}}</td>
-        <td>{{c.cause}}</td>
-        <td>{{c.date}}</td>
-        <td>{{c.status}}</td>
-    </tr>
-</table>
-</div>
+    <h1>Apply For Claim, View Policies and Claim Status</h1>
+    </div>
+    <br>
+    <!-- <div class="center">
+        <form #myForm1="ngForm" (ngSubmit)="search()">
+            <table>
+                <tr>
+                    <td><label for="emailId">Farmer Email ID</label> </td>   
+                    <td><input  type="email" name="emailId" [(ngModel)]="mail" required></td>       
+                </tr>
+                <tr>
+                    <td></td>   
+                    <td><input type="submit" value="Search" [disabled]="!myForm1.valid"></td>       
+                </tr>
+            </table>
+    
+        </form>
+    
+    </div> -->
+    <div class="center">
+    <br>
+    <h2>Apply for Claim</h2>
+    <br>
+    </div>
+    <div class="center">
+        <form #myForm2="ngForm" (ngSubmit)="saveData()">
+            <table>
+                <tr>
+                    <td><label for="policyId">Policy No</label> </td>   
+                    <td><input #id=ngModel type="text" name="policyId" [(ngModel)]="claim.policyId" required></td>  
+                    <div *ngIf="(id.dirty||id.touched)" style="color: red;">
+                        <div *ngIf="id.errors?.required"><h5>*Insurance Id is required</h5></div>
+                    </div>     
+                </tr>
+                <tr>
+                    <td><label for="emailId">Farmer Email ID</label> </td>   
+                    <td><input #email=ngModel type="email" name="emailId" [(ngModel)]="claim.emailId" required></td> 
+                    <div *ngIf="(email.dirty||email.touched)" style="color: red;">
+                        <div *ngIf="email.errors?.required"><h5>*EMail is required</h5></div>
+                    </div>           
+                </tr>
+                <tr>
+                    <td><label for="cause">Cause of Loss</label> </td>   
+                    <td><input #Ca=ngModel type="text" name="cause" [(ngModel)]="claim.cause" required></td>      
+                    <div *ngIf="(Ca.dirty||Ca.touched)" style="color: red;">
+                        <div *ngIf="Ca.errors?.required"><h5>*Cause is required</h5></div>
+                    </div> 
+                </tr>
+                <tr>
+                    <td><label for="date">Date of Loss</label> </td>   
+                    <td><input #date=ngModel type="Date" name="date" [(ngModel)]="claim.date" required></td>   
+                    <div *ngIf="(date.dirty||date.touched)" style="color: red;">
+                        <div *ngIf="date.errors?.required"><h5>*Date is required</h5></div>
+                    </div>     
+                </tr>
+                <tr>
+                    <td></td>   
+                    <td><input type="submit" value="Apply for Claim" [disabled]="!myForm2.valid"></td>       
+                </tr>
+            </table>
+    
+        </form>
+    </div>
+    <br>
+    <div class="center">
+    <h2>Your Policies</h2>
+    </div><br>
+    <div class="center">
+    <table class="Table">
+        <thead>
+            <th>Policy Id</th>
+            <th>Farmer Name</th>
+            <th>Crop Name</th>
+            <th>Crop Type</th>
+            <th>PerimumAmount Paid</th>
+            <th>Policy Ammount</th>
+        </thead>
+        <tr *ngFor="let p of policy">
+            <td>{{p.policyId}}</td>
+            <td>{{p.farmerName}}</td>
+            <td>{{p.cropName}}</td>
+            <td>{{p.cropType}}</td>
+            <td>{{p.perimumAmount}}</td>
+            <td>{{p.sumInsured}}</td>
+        </tr>
+    </table>
+    </div><br>
+    <div class="center">
+    <h2>Your Claims</h2>
+    </div>
+    <div class="center">
+    <table class="Table">
+        <thead>
+            <th>Claim Id</th>
+            <th>Policy Id</th>
+            <th>Cause</th>
+            <th>Date</th>
+            <th>status</th>
+        </thead>
+        <tr *ngFor="let c of claimFetch">
+            <td>{{c.claimId}}</td>
+            <td>{{c.policyId}}</td>
+            <td>{{c.cause}}</td>
+            <td>{{c.date}}</td>
+            <td>{{c.status}}</td>
+        </tr>
+    </table>
+    </div>

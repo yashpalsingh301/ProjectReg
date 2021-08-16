@@ -7,7 +7,7 @@ import { Insurance } from './insurance';
 })
 export class InsuranceService {
 
-  baseUrl:string='http://localhost:9887/insuranceRest/api';
+  baseUrl:string='http://localhost:9797/insuranceRest/api';
   constructor(private httpClient:HttpClient) { }
   getAllInsurance()
   {

@@ -28,6 +28,8 @@ export class LoginComponent implements OnInit {
   loginFarmers(){
     this.farmerService.loginFarmer(this.farmer).subscribe(
       data=>{
+        sessionStorage.setItem('mail',String(this.farmer.email));
+        console.log(this.farmer.email);
         console.log("fine");
         this.router.navigate(['/afterLogin']);
         

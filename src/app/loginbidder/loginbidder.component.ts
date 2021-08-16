@@ -23,7 +23,7 @@ export class LoginbidderComponent implements OnInit {
     this.service.loginBidder(this.bidder).subscribe(
       data=>{
         console.log("response recieved successfully");
-        this.msg="Successfully logged in "
+        this.router.navigate(['/biddingTable'])
         // this.route.navigate(['/addFarmer']);
         
     },

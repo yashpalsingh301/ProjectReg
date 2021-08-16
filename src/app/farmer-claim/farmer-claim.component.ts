@@ -20,22 +20,34 @@ export class FarmerClaimComponent implements OnInit {
   constructor(private claimService:ClaimService,private policyService:PolicyService) {
       this.claim=new Claim();
       this.policy=new Policy();
+
+
+      this.mail = sessionStorage.getItem('mail');
+     // alert(this.mail)
+      this.policyService.getPolicyByEmailId(this.mail).subscribe((data)=>
+      {
+        this.policy=data;
+      });
+      this.claimService.getClaimFromMail(this.mail).subscribe((data)=>
+      {
+        this.claimFetch=data;
+      })
    }
 
   ngOnInit(): void {
-
+      
   }
   search()
   {
-    //this.mail=this.claim.emailId
-    this.policyService.getPolicyByEmailId(this.mail).subscribe((data)=>
-    {
-      this.policy=data;
-    });
-    this.claimService.getClaimFromMail(this.mail).subscribe((data)=>
-    {
-      this.claimFetch=data;
-    })
+    // //this.mail=this.claim.emailId
+    // this.policyService.getPolicyByEmailId(this.mail).subscribe((data)=>
+    // {
+    //   this.policy=data;
+    // });
+    // this.claimService.getClaimFromMail(this.mail).subscribe((data)=>
+    // {
+    //   this.claimFetch=data;
+    // })
   }
   saveData()
   {
